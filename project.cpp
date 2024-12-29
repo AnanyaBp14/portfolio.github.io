@@ -182,7 +182,7 @@
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <a href="home.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="project.html">Project</a>
         <a href="ananya.html">Ananya</a>
         <a href="chinmayi.html">Chinmayi</a>
