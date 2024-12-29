@@ -1,0 +1,352 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design and Analysis of Algorithms (DAA)</title>
+    <style>/* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #F7D1A4; /* Soft Peach */
+            color: #617E96; /* Slate Blue */
+        }
+        
+        /* Navigation styling */
+        nav {
+            background-color: #617E96; /* Slate Blue */
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        
+        nav a:hover {
+            background-color: #A0CDCA; /* Cool Aquamarine */
+            border-radius: 5px;
+        }
+        
+        /* Main content styling */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #617E96; /* Slate Blue */
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        h3 {
+            color: #617E96; /* Slate Blue */
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            color: #D9B29F; /* Soft Lavender */
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        ul li {
+            margin-bottom: 8px;
+        }
+        
+        ul.sdg-list {
+            list-style-type: none;
+        }
+        
+        ul.sdg-list li {
+            margin-bottom: 12px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+        
+        /* Code block styling */
+        code {
+            background-color: #D9B29F; /* Soft Lavender */
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+        
+        a {
+            color: #617E96; /* Slate Blue */
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            color: #A0CDCA; /* Cool Aquamarine */
+        }
+        
+        /* Section specific styling */
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        section p {
+            font-size: 1.1em;
+        }
+        
+        section ul li {
+            font-size: 1.1em;
+        }
+        
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px;
+            }
+        
+            nav a {
+                padding: 8px 15px;
+                margin: 5px;
+            }
+        
+            section {
+                padding: 15px;
+            }
+        
+            h2, h3 {
+                font-size: 1.8em;
+            }
+        
+            p, ul li {
+                font-size: 1em;
+            }
+        }
+        </style>
+</head>
+<body>
+  <nav>
+        <a href="home.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="ananya.html">Ananya</a>
+        <a href="chinmayi.html">Chinmayi</a>
+        <a href="ria.html">Ria</a>
+        <a href="sanjana.html">Sanjana</a>
+        <a href="#about">About</a>
+    </nav>
+	<section>
+    <h2>Course Learning Reflections</h2>
+<section>
+    <p><strong>What are the kinds of problems we see in the nature? (iteration, recursion, backtracking)</strong></p>
+    <p>In nature, we see <strong>iteration</strong> in things like the changing seasons or animals following their migration routes year after year. <strong>Recursion</strong> shows up in patterns like the way trees branch out, shells spiral, or cabbage grows in layers. Then there’s <strong>backtracking</strong>, like when ants explore their surroundings and find their way back home, or when predators adjust their approach while hunting. These processes are like nature’s way of solving problems, much like how we use these concepts in computing.</p>
+</section>
+  <section>
+    <p><strong>What is space and time efficiency? Why are they important? Explain the different class of problems and orders of growth</strong></p>
+    <p><strong>Space and Time Efficiency</strong><br>
+    Space efficiency refers to minimizing memory usage, while time efficiency focuses on reducing execution time. Efficient algorithms are crucial for handling large inputs, saving resources, and improving performance.</p>
+
+    <p><strong>Classes of Problems</strong><br>
+    Algorithms are classified based on their time complexity:
+    <ul>
+        <li><strong>Constant (O(1))</strong>: Fixed time (e.g., accessing an array element).</li>
+        <li><strong>Logarithmic (O(log n))</strong>: Scales with the logarithm of input (e.g., binary search).</li>
+        <li><strong>Linear (O(n))</strong>: Scales proportionally with input (e.g., array traversal).</li>
+        <li><strong>Linearithmic (O(n log n))</strong>: Common in sorting (e.g., merge sort).</li>
+        <li><strong>Quadratic (O(n^2))</strong>: Nested loops (e.g., bubble sort).</li>
+        <li><strong>Exponential (O(2^n))</strong>: Grows rapidly (e.g., brute-force TSP).</li>
+        <li><strong>Factorial (O(n!))</strong>: Extremely slow (e.g., generating permutations).</li>
+    </ul></p>
+
+    <p><strong>Orders of Growth</strong><br>
+    Growth rates help evaluate best, worst, and average-case performance, guiding algorithm selection for better efficiency in real-world applications.</p>
+</section>
+      <section>
+    <p><strong>Take away from different design principles from chapter 2 (can use the notes provided)</strong></p>
+    <p>As I delved into different algorithms, the key concepts started to become clearer. Understanding how AVL trees and Red-Black trees keep their balance underscored the importance of structured data and efficient operations. Comparing the daring and careful approaches of DFS and BFS in graph traversal illustrated how varying strategies can effectively solve problems. Lastly, learning how sorting algorithms function—whether by dividing and merging or swapping elements—helped me grasp their underlying principles. Overall, these insights have provided a solid understanding of algorithmic foundations.</p>
+</section>
+      <section>
+    <p><strong>The hierarchical data and how different tree data structures solve and optimize over the problem scenarios (tree, bst, avl, 2-3, red-black, heap, trie)</strong></p>
+    <p>Tree data structures are great for organizing hierarchical data and solving different types of problems. Binary Search Trees (BSTs) help with faster searches by keeping nodes in order, but they can get unbalanced over time. The 2-3 tree solves this by automatically balancing itself and keeping all leaf nodes at the same level, though it can still become a bit skewed. The AVL tree improves on this by using a balancing factor and rotations to keep things more evenly spread out. To make balancing even more efficient, the Red-Black tree was introduced, requiring fewer rotations. Heaps are complete binary trees that maintain a special order, making them perfect for priority queues where you need quick access to the highest or lowest value. Lastly, Tries are trees designed to store and search strings quickly, commonly used in things like autocomplete and prefix searching.</p>
+</section>
+  <section>
+      <p><strong>The need of array query algorithms and their implications. Their applications and principles need to be discussed</strong></p>
+    <p>Array query algorithms are essential for quickly searching, updating, and processing data in arrays, especially when dealing with large amounts of data. They’re used in applications like databases, search engines, and real-time systems. Common tasks include finding specific elements, performing range queries (like summing values or finding the minimum/maximum), and updating data. These algorithms often use techniques like preprocessing (e.g., creating prefix sums), divide and conquer (like binary search), and specialized structures (like Fenwick trees) to speed up operations. By making these tasks more efficient, array query algorithms help improve performance in various applications.</p>
+</section>
+      <section>
+    <p><strong>Differentiate between tree and graphs and their traversals. The applications of each</strong></p>
+    <p>Trees are like family trees or organization charts—they have a clear starting point (the root) and show a simple, one-way relationship between elements, without any loops. Graphs, on the other hand, are more flexible and complex. They can have cycles and multiple connections between nodes, making them great for modeling things like social networks or road maps.</p>
+    <ul>
+        <li><strong>Tree Traversals:</strong>
+            <ul>
+                <li>Pre-order</li>
+                <li>In-order</li>
+                <li>Post-order</li>
+            </ul>
+        </li>
+        <li><strong>Graph Traversals:</strong>
+            <ul>
+                <li>DFS (Depth-First Search)</li>
+                <li>BFS (Breadth-First Search)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>Trees are used in hierarchical data representation (e.g., file systems), searching (e.g., BSTs), and priority queues (e.g., heaps).<br>
+    Graphs are used in social networks, routing systems, computer networks.</p>
+</section>
+  <section>
+        <p><strong>Deliberate on sorting and searching algorithms, the technique behind each and they connect to real world</strong></p>
+    <p><strong>Sorting</strong> algorithms, like <strong>Quick Sort</strong> and <strong>Merge Sort</strong>, help organize data quickly—think of sorting a list of names or arranging search results. <strong>Searching</strong> algorithms, like <strong>Binary Search</strong> and <strong>Linear Search</strong>, help find specific items—<strong>Binary Search</strong> is faster for sorted data, while <strong>Linear Search</strong> checks each item one by one. These algorithms are used in everyday tasks like online shopping, managing inventories, or analyzing data, making everything run faster and more smoothly.</p>
+</section>
+  <section>
+        <p><strong>Discuss the importance of graph algorithms with respect to spanning trees and shortest paths</strong></p>
+    <p>Graph algorithms are essential for finding the best connections in networks. <strong>Spanning tree</strong> algorithms, like <strong>Kruskal's</strong> and <strong>Prim's</strong>, help link all points in a network without any loops, minimizing costs—think of building the least expensive road system between cities. <strong>Shortest path</strong> algorithms, such as <strong>Dijkstra's</strong> and <strong>Bellman-Ford</strong>, help find the fastest route between two points, which is key in GPS navigation or internet routing. These algorithms make networks and connections more efficient in real-world applications.</p>
+</section>
+  <section>
+        <p><strong>Discuss about the different studied algorithm design techniques.</strong></p>
+    <ul>
+        <li><strong>Backtracking</strong>: This is like trying different paths to solve a problem and giving up on those that don’t work, as seen in the N-Queens problem where you explore all possibilities and backtrack when needed.</li>
+        <li><strong>Sorting Algorithms:</strong>
+            <ul>
+                <li><strong>Divide and Conquer</strong>: Algorithms like Quick Sort and Merge Sort break down a problem into smaller parts, solve them, and then combine the results.</li>
+                <li><strong>Comparison-Based</strong>: Methods like Selection Sort, Insertion Sort, and Bubble Sort work by comparing elements and organizing them step by step.</li>
+                <li><strong>Brute Force</strong>: This technique simply tries all possible solutions one by one, which works but can be slow for larger problems.</li>
+            </ul>
+        </li>
+        <li><strong>String Search Algorithms</strong>: Algorithms like Boyer-Moore, Knuth-Morris-Pratt, and Rabin-Karp are designed to quickly search for patterns in text, making tasks like searching for a word in a document faster.</li>
+        <li><strong>Shortest Path Algorithms</strong>: Dijkstra’s, Floyd’s, Warshall’s, and Prim’s are all about finding the fastest route or shortest path in a network, like navigating from one place to another in a map or connecting points in the most efficient way.</li>
+    </ul>
+      </section>
+</section>
+      <section>
+    <h2>Detailed breakdown of Business cases</h2>
+<section>
+    <h3>Smart City Traffic Management</h3>
+    <p>In a smart city, real-time traffic monitoring is a game changer for improving the daily commute and making the streets safer and more efficient. By using technologies like sensors, traffic cameras, and GPS data, cities can continuously track and analyze traffic patterns, allowing for smarter decisions and quicker responses to traffic issues.</p>
+    <p>The process starts with gathering data from various sources. Sensors embedded in roads, cameras, and even GPS in cars give live information about vehicle speeds, traffic flow, and any road blockages. This data is processed instantly using algorithms that predict where traffic jams might occur or which routes are the fastest. This data is processed in real time using sophisticated algorithms to optimize traffic flow, reduce delays, and ensure smoother transportation. Traffic sensors feed real-time data into arrays, which are updated regularly with counts and speeds. Hashing helps you quickly retrieve specific traffic data for roads or vehicles based on their unique identifiers. Sparse tables make it easy to quickly answer complex questions about traffic over time or across locations.</p>
+
+    <h4>Array</h4>
+    <p><strong>1. Arrays:</strong><br>
+    <strong>Data Collection:</strong> Arrays store real-time traffic data such as vehicle counts, speeds, or sensor readings at various locations (intersections, highways). These data points are stored in indexed positions within arrays, allowing for fast updates and retrieval.<br>
+    <strong>Traffic Flow Analysis:</strong> Arrays can be used to keep track of traffic conditions (e.g., car density, speed at different time intervals) at each sensor or traffic signal. This allows for quick access to specific locations or times.</p>
+    <p><a href="#array.cpp">Array code link here</a></p>
+
+    <h4>Hashing</h4> 
+    <p><strong>2. Hashing:</strong><br>
+    <strong>Data Indexing:</strong> Hashing is used to quickly map traffic data to specific locations or times. A hash function can map intersection IDs or time slots to the respective data values (e.g., vehicle counts).<br>
+    <strong>Collision Resolution:</strong> For efficient real-time processing, hashing reduces the need for searching through large datasets by providing direct access to data points.</p>
+    <p><a href="#hashing.cpp">Hashing code link here</a></p>
+
+    <h4>Sparse Table</h4>
+    <p><strong>3. Sparse Table:</strong><br>
+    <strong>Efficient Range Queries:</strong> Sparse tables are useful for answering range queries (e.g., average vehicle count or speed) efficiently in scenarios where traffic data needs to be queried over a range of time or locations.<br>
+    <strong>Preprocessing:</strong> Sparse tables preprocess the traffic data, allowing queries to be answered in constant time, which is crucial for real-time systems that need to process data rapidly.</p>
+    <p><a href="#sparcetable.cpp">Sparce table code link here</a></p>
+</section>
+      <section>
+    <h3>EV Charging Station Management</h3>
+    <p>Efficient management of EV charging stations in a city is crucial for ensuring accessibility and optimizing usage. Data structures like Binary Search Trees (BST), Tries, and Arrays play a vital role in organizing, searching, and retrieving information about charging stations.</p>
+    
+    <p><strong>1. Binary Search Tree (BST)</strong><br>
+    <strong>Use Case:</strong> Managing charging stations based on numerical attributes such as distance, availability, or user ratings.<br>
+    <strong>Features:</strong> Efficiently supports range queries and sorted access. Operations like insertion, deletion, and search work in O(logn) time (on average).<br>
+    <strong>Example:</strong> Storing charging stations sorted by distance allows users to query the nearest or farthest station effortlessly.</p>
+    <p><a href="#bst.cpp">BST code link here</a></p>
+    
+    <p><strong>2. Trie</strong><br>
+    <strong>Use Case:</strong> Managing stations by textual data like names, locations, or zip codes.<br>
+    <strong>Features:</strong> Enables fast prefix-based searches in O(l) where L is the length of the search key.<br>
+    <strong>Example:</strong> A user types "Downtown", and the Trie instantly returns "Downtown Avenue Charging" or "Downtown Mall Charging Station".</p>
+    <p><a href="#trie.cpp">Trie code link here</a></p>
+
+    <p><strong>3. Arrays</strong><br>
+    <strong>Use Case:</strong> Storing and updating real-time status data such as availability, usage stats, or maintenance schedules.<br>
+    <strong>Features:</strong> Direct indexing for constant-time access. Memory-efficient for static or fixed datasets.<br>
+    <strong>Example:</strong> Use an array indexed by station ID to track whether a station is "Free" or "Occupied".</p>
+    <p><a href="#arrayEV.cpp">Sparce table code link here</a></p>
+    
+    <h4>System Workflow Example</h4>
+    <p><strong>Storage:</strong><br>
+    Use a BST to sort stations by distance for range-based queries.<br>
+    Use a Trie for searching stations by name or location.<br>
+    Use an Array to store real-time status updates for quick lookup.</p>
+
+    <p><strong>Query Handling:</strong><br>
+    A user searches for the nearest station: BST retrieves the closest one.<br>
+    A user types part of a station name: Trie provides suggestions.<br>
+    Retrieve the availability status: Use an array to check occupancy.</p>
+
+    <p><strong>Benefits</strong><br>
+    Efficiency: Fast query responses and updates.<br>
+    Scalability: Handles large networks of charging stations.<br>
+    User Experience: Provides seamless access to station information and status.</p>
+      </section>
+      </section>
+   <section>
+ <h2>SDGs Alignment</h2>
+
+    <section>
+        <h3>Real-Time Traffic Monitoring</h3>
+        <p>Real-time traffic monitoring in smart cities contributes to improved transportation systems, enhanced infrastructure, and better urban planning. It aligns with the following SDGs:</p>
+        <ul class="sdg-list">
+            <li><strong>SDG 9: Industry, Innovation, and Infrastructure</strong>
+                <ul>
+                    <li>9.1.1: Proportion of the rural population who live within 2 km of an all-season road.</li>
+                    <li>9.1.2: Passenger and freight volumes, by mode of transport.</li>
+                    <li>9.c.1: Proportion of population covered by a mobile network, by technology.</li>
+                </ul>
+            </li>
+            <li><strong>SDG 11: Sustainable Cities and Communities</strong>
+                <ul>
+                    <li>11.2.1: Proportion of population that has convenient access to public transport.</li>
+                    <li>11.3.1: Ratio of land consumption rate to population growth rate.</li>
+                    <li>11.3.2: Proportion of cities with a direct participation structure of civil society in urban planning.</li>
+                    <li>11.4.1: Total expenditure per capita spent on the preservation, protection, and conservation of cultural and natural heritage.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>EV Charging Station Management</h3>
+        <p>Efficient management of EV charging stations optimizes energy usage, promotes clean energy solutions, and supports the transition to sustainable transport systems. This business case aligns with the following SDGs:</p>
+        <ul class="sdg-list">
+            <li><strong>SDG 7: Affordable and Clean Energy</strong>
+                <ul>
+                    <li>7.1.1: Proportion of population with access to electricity.</li>
+                    <li>7.2.1: Renewable energy share in the total final energy consumption.</li>
+                    <li>7.3.1: Energy intensity measured in terms of primary energy and GDP.</li>
+                    <li>7.a.1: International financial flows to developing countries in support of clean energy research, development, and renewable energy production.</li>
+                    <li>7.b.1: Installed renewable energy-generating capacity in developing countries.</li>
+                </ul>
+            </li>
+            <li><strong>SDG 11: Sustainable Cities and Communities</strong>
+                <ul>
+                    <li>11.2.1: Proportion of population that has convenient access to public transport.</li>
+                </ul>
+            </li>
+        </ul>
+      </section>
+    </section>
+</body>
+</html>
