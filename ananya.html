@@ -2,7 +2,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design and Analysis of Algorithms (DAA)</title>
-    <style>/* General styling */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design and Analysis of Algorithms (DAA)</title>
+    <style>
+        /* General styling */
         * {
             margin: 0;
             padding: 0;
@@ -16,7 +20,47 @@
             color: #617E96; /* Slate Blue */
         }
         
-        /* Navigation styling */
+    nav {
+    background: linear-gradient(90deg, #617E96, #006D77);
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    color: #A0CDCA;
+    transform: scale(1.05);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #A0CDCA;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+    /* Navigation styling */
         nav {
             background-color: #617E96; /* Slate Blue */
             padding: 10px;
@@ -31,11 +75,60 @@
             display: inline-block;
         }
         
-        nav a:hover {
-            background-color: #A0CDCA; /* Cool Aquamarine */
-            border-radius: 5px;
-        }
         
+        /* Header Section */
+header {
+    background: linear-gradient(135deg, #006D77, #61A5C2, #A0CDCA);
+    text-align: center;
+    padding: 70px 20px;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: headerFadeIn 1.2s ease-in-out ;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    font-weight: 900;
+    background: linear-gradient(to right, #F7D1A4, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShimmer 3s infinite alternate;
+}
+
+header p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    animation: subheaderFadeIn 1.5s ease-in-out;
+}
+
+/* Header Animations */
+@keyframes headerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textShimmer {
+    0% {
+        background-position: -500% 0;
+    }
+    100% {
+        background-position: 500% 0;
+    }
+}
         /* Main content styling */
         section {
             padding: 20px;
@@ -44,11 +137,13 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        
         h2 {
             color: #617E96; /* Slate Blue */
             margin-bottom: 15px;
             text-align: center;
         }
+        
         h3 {
             color: #617E96; /* Slate Blue */
             margin-bottom: 15px;
@@ -117,6 +212,7 @@
         section ul li {
             font-size: 1.1em;
         }
+
         /* Footer */
         footer {
             background-color: #006D77; /* Deep Teal */
@@ -163,12 +259,16 @@
         
             p, ul li {
                 font-size: 1em;
+            }
             
-	    footer {
+            footer {
                 font-size: 0.9rem;
                 padding: 15px 0;
             }
         }
+    </style>
+</head>
+
         </style>
 </head>
 <body>
@@ -181,9 +281,13 @@
         <a href="sanjana.html">Sanjana</a>
         <a href="#about">About</a>
     </nav>
+  
+  <header>
+        <h1><b><strong>Course Learning Reflections </strong></b></h1>
+    </header>
+  <section>
 	<section>
-    <h2>Course Learning Reflections</h2>
-<section>
+   
     <p><strong>What are the kinds of problems we see in the nature? (iteration, recursion, backtracking)</strong></p>
     <p>In nature, we see <strong>iteration</strong> in things like the changing seasons or animals following their migration routes year after year. <strong>Recursion</strong> shows up in patterns like the way trees branch out, shells spiral, or cabbage grows in layers. Then there’s <strong>backtracking</strong>, like when ants explore their surroundings and find their way back home, or when predators adjust their approach while hunting. These processes are like nature’s way of solving problems, much like how we use these concepts in computing.</p>
 </section>
@@ -266,7 +370,9 @@
       </section>
 </section>
       <section>
-    <h2>Detailed breakdown of Business cases</h2>
+    <header>
+        <h1><b><strong>Detailed Breakdown of Business Cases  </strong></b></h1>
+    </header>
 <section>
     <h3>Smart City Traffic Management</h3>
     <p>In a smart city, real-time traffic monitoring is a game changer for improving the daily commute and making the streets safer and more efficient. By using technologies like sensors, traffic cameras, and GPS data, cities can continuously track and analyze traffic patterns, allowing for smarter decisions and quicker responses to traffic issues.</p>
@@ -330,7 +436,9 @@
       </section>
       </section>
    <section>
- <h2>SDGs Alignment</h2>
+ <header>
+        <h1><b><strong>SDG's Alignment</strong></b></h1>
+    </header>
 
     <section>
         <h3>Real-Time Traffic Monitoring</h3>
