@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Strategies & Algorithmic Problem Solving</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+      nav {
+    background-color: #617E96; /* Slate Blue */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    text-align: center;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #A0CDCA; /* Cool Aquamarine */
+    transform: translateY(-5px);
+}
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a76a8;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4a76a8;
+            margin-bottom: 10px;
+        }
+        .content {
+            margin-left: 20px;
+        }
+        .content p {
+            margin: 5px 0;
+        }
+        .focus {
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f2f2f2;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        ul li span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+  <nav>
+            <a href="index.html">Home</a>
+            <a href="project.html">Project</a>
+            <a href="ananya.html">Ananya</a>
+      <a href="chinmayi.html">Chinmayi</a>
+            <a href="ria.html">Ria</a>
+            <a href="sanjana.html">Sanjana</a>
+            <a href="about.html">About</a>
+    </nav>
+
+    <div class="container">
+        <div class="header">Algorithmic Problem-Solving Techniques</div>
+        
+        <div class="section">
+            <div class="section-title">1. Problems in Nature</div>
+            <div class="content">
+                <ul>
+                    <li><span>Iteration:</span>
+                        <ul>
+                            <li>Compound Interest: Keeps adding interest over time.</li>
+                            <li>Traffic Lights: Switches between red, yellow, and green.</li>
+                        </ul>
+                    </li>
+                    <li><span>Recursion:</span>
+                        <ul>
+                            <li>Directory Size: Adds up folder sizes, including subfolders.</li>
+                            <li>Fractals: Patterns repeat in smaller versions.</li>
+                        </ul>
+                    </li>
+                    <li><span>Backtracking:</span>
+                        <ul>
+                            <li>Sudoku: Fills in numbers and fixes mistakes.</li>
+                            <li>Maze: Tries a path, goes back if stuck.</li>
+                        </ul>
+                    </li>
+                    <li><span>Divide and Conquer:</span>
+                        <ul>
+                            <li>Merging Records: Breaks data into pieces and puts it together.</li>
+                            <li>Sorting (Merge Sort): Splits, sorts, and combines data.</li>
+                        </ul>
+                    </li>
+                    <li><span>Greedy Algorithm:</span>
+                        <ul>
+                            <li>ATM Withdrawal: Takes the biggest bills first.</li>
+                            <li>Activity Scheduling: Chooses the task that ends quickest.</li>
+                        </ul>
+                    </li>
+                    <li><span>Dynamic Programming:</span>
+                        <ul>
+                            <li>Route Planning: Solves parts of a route to find the best one.</li>
+                            <li>Fibonacci: Remembers results to avoid doing the same work again.</li>
+                        </ul>
+                    </li>
+                    <li><span>Graph Algorithms:</span>
+                        <ul>
+                            <li>Dijkstra (Shortest Path): Finds the quickest route.</li>
+                            <li>Prim's/Kruskal's (MST): Connects with the least cost.</li>
+                        </ul>
+                    </li>
+                    <li><span>Sorting Algorithms:</span>
+                        <ul>
+                            <li>Task Sorting: Organizes tasks to get them done efficiently.</li>
+                            <li>Ticket Sorting: Sorts tickets by price.</li>
+                        </ul>
+                    </li>
+                    <li><span>Searching Algorithms:</span>
+                        <ul>
+                            <li>Linear Search: Finds a file.</li>
+                            <li>Binary Search: Finds a word in a sorted list.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">2. Space and Time Efficiency</div>
+            <div class="content">
+                <ul>
+                    <li>Space Efficiency: Extra memory an algorithm uses.</li>
+                    <li>Time Efficiency: Speed at which an algorithm completes its task.</li>
+                </ul>
+                <h3>Orders of Growth:</h3>
+                <table>
+                    <tr>
+                        <th>Order</th>
+                        <th>Time</th>
+                        <th>Space</th>
+                    </tr>
+                    <tr>
+                        <td>O(1)</td>
+                        <td>Array access</td>
+                        <td>Single variable</td>
+                    </tr>
+                    <tr>
+                        <td>O(log n)</td>
+                        <td>Binary search</td>
+                        <td>Recursive stack</td>
+                    </tr>
+                    <tr>
+                        <td>O(n)</td>
+                        <td>Loop through list</td>
+                        <td>Storing list</td>
+                    </tr>
+                    <tr>
+                        <td>O(n log n)</td>
+                        <td>Merge Sort</td>
+                        <td>Auxiliary space</td>
+                    </tr>
+                    <tr>
+                        <td>O(n²)</td>
+                        <td>Bubble Sort</td>
+                        <td>2D matrix</td>
+                    </tr>
+                    <tr>
+                        <td>O(2<sup>n</sup>)</td>
+                        <td>Brute force</td>
+                        <td>Storing subsets</td>
+                    </tr>
+                    <tr>
+                        <td>O(n!)</td>
+                        <td>Generating permutations</td>
+                        <td>Storing permutations</td>
+                    </tr>
+                </table>
+                <h3>Complexity Order:</h3>
+                <ul>
+                    <li>Time: O(1) &lt; O(log n) &lt; O(n) &lt; O(n log n) &lt; O(n²) &lt; O(2<sup>n</sup>) &lt; O(n!)</li>
+                    <li>Space: O(1) &lt; O(log n) &lt; O(n) &lt; O(n log n) &lt; O(n²) &lt; O(2<sup>n</sup>) &lt; O(n!)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">3. Design Principles</div>
+            <div class="content">
+                <ul>
+                    <li>Shortest Path Trees:
+                        <ul>
+                            <li>Finds the most efficient routes.</li>
+                            <li>Real-world example: GPS routing.</li>
+                        </ul>
+                    </li>
+                    <li>Partitioning:
+                        <ul>
+                            <li>Breaks down complex problems into smaller segments.</li>
+                            <li>Example: Quicksort.</li>
+                        </ul>
+                    </li>
+                    <li>Balancing and Rotations:
+                        <ul>
+                            <li>Maintains optimal performance of data structures.</li>
+                            <li>Examples: AVL trees, Red-Black trees.</li>
+                        </ul>
+                    </li>
+                    <li>Edge Relaxation:
+                        <ul>
+                            <li>Allows dynamic updating of path solutions.</li>
+                            <li>Example: Dijkstra's algorithm.</li>
+                        </ul>
+                    </li>
+                    <li>Level Order Traversal:
+                        <ul>
+                            <li>Systematic, layer-by-layer exploration.</li>
+                            <li>Used in graph and tree navigation techniques.</li>
+                        </ul>
+                    </li>
+                    <li>Pruning:
+                        <ul>
+                            <li>Eliminates unnecessary solution paths.</li>
+                            <li>Reduces computational complexity.</li>
+                        </ul>
+                    </li>
+                    <li>Brave and Cautious Travel Strategies:
+                        <ul>
+                            <li>DFS: Deep exploration.</li>
+                            <li>BFS: Methodical investigation.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">4. Hierarchical Data Structures</div>
+            <div class="content">
+                <ul>
+                    <li>Tree:
+                        <ul>
+                            <li>Represents hierarchies (filesystems, organizations).</li>
+                            <li><strong>Pro</strong>: Simple and intuitive.</li>
+                            <li><strong>Con</strong>: Lacks balance; inefficient operations.</li>
+                        </ul>
+                    </li>
+                    <li>Binary Search Tree (BST):
+                        <ul>
+                            <li>Sorted data storage and retrieval.</li>
+                            <li><strong>Pro</strong>: Efficient when balanced.</li>
+                            <li><strong>Con</strong>: Degrades if unbalanced.</li>
+                        </ul>
+                    </li>
+                    <li>AVL Tree:
+                        <ul>
+                            <li>Always balanced; guarantees O(log n) operations.</li>
+                            <li><strong>Con</strong>: Costly rotations during updates.</li>
+                        </ul>
+                    </li>
+                    <li>2-3 Tree:
+                        <ul>
+                            <li>Ensures perfect balance with multi-child nodes.</li>
+                            <li><strong>Pro</strong>: Robust structure.</li>
+                            <li><strong>Con</strong>: Implementation complexity.</li>
+                        </ul>
+                    </li>
+                    <li>Red-Black Tree:
+                        <ul>
+                            <li>Dynamic operations with approximate balancing.</li>
+                            <li><strong>Pro</strong>: Predictable O(log n).</li>
+                            <li><strong>Con</strong>: Slightly slower lookups compared to AVL.</li>
+                        </ul>
+                    </li>
+                    <li>Heap:
+                        <ul>
+                            <li>Priority management and sorting.</li>
+                            <li><strong>Pro</strong>: Efficient for priority queues.</li>
+                            <li><strong>Con</strong>: Not always optimal for all operations.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header">Industrial Strategies</div>
+        
+        <div class="section">
+            <div class="section-title">SDG Target 11.2</div>
+            <div class="content">
+                <p><span class="focus">Focus:</span> Provide access to safe, affordable, accessible, and sustainable transport systems for all, improving road safety and reducing traffic congestion.</p>
+                <p><span class="focus">SDG Indicator 11.2.1:</span> Proportion of the population that has convenient access to public transport by age, sex, and persons with disabilities.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">SDG Target 9.4</div>
+            <div class="content">
+                <p><span class="focus">Focus:</span> Upgrade infrastructure and retrofit industries to make them sustainable, with increased resource-use efficiency and greater adoption of clean and environmentally sound technologies.</p>
+                <p><span class="focus">SDG Indicator 9.4.1:</span> CO2 emissions per unit of value added (reduced by optimizing traffic flow and minimizing idling time).</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">SDG Target 13.2</div>
+            <div class="content">
+                <p><span class="focus">Focus:</span> Integrate climate change measures into national policies, strategies, and planning to reduce emissions from traffic congestion.</p>
+                <p><span class="focus">SDG Indicator 13.2.1:</span> Number of countries with integrated climate change policies and strategies.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
