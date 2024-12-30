@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F7D1A4; /* Soft Peach */
+            margin: 0;
+            padding: 0;
+            color: #617E96; /* Slate Blue */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #617E96; /* Slate Blue */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav a {
+            color: #FFFFFF; /* White */
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #A0CDCA; /* Cool Aquamarine */
+            transform: translateY(-3px);
+        }
+
+        /* Header */
+        header {
+            background-color: #F7D1A4;
+            text-align: center;
+            padding: 0px 15px;
+            color: #FFFFFF; /* White */
+            font-size: 2rem;
+        }
+main h2 {
+    text-align: center;
+    margin: 20px auto; /* Adds spacing */
+    font-size: 1.5rem; /* Adjust font size if needed */
+    color:#617E96 ; /* Matches the palette */
+    line-height: 1.8; /* Improves readability */
+}
+        /* Team Section */
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .team-member {
+            background-color: #FFFFFF; /* White */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            color: #617E96; /* Slate Blue */
+        }
+
+        .team-member p {
+            margin: 5px 0;
+            color: #A0CDCA; /* Cool Aquamarine */
+        }
+
+        .skills {
+            margin-top: 10px;
+        }
+
+        .skill {
+            background-color: #D9B29F; /* Soft Lavender */
+            color: #FFFFFF;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 5px auto;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #006D77; /* Deep Teal */
+            color: #FFFFFF; /* White */
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul style="list-style: none; display: flex; justify-content: center; padding: 0; margin: 0;">
+            <li style="margin: 0 1rem;"><a href="index.html">Home</a></li>
+            <li style="margin: 0 1rem;"><a href="project.html">Project</a></li>
+            <li style="margin: 0 1rem;"><a href="chinmayi.html">Chinmayi</a></li>
+            <li style="margin: 0 1rem;"><a href="ananya.html">Ananya</a></li>
+            <li style="margin: 0 1rem;"><a href="ria.html">Ria</a></li>
+            <li style="margin: 0 1rem;"><a href="sanjana.html">Sanjana</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Meet Our Team</h1>
+      </header>
+  <main>
+        <h2><p>At VAYUJIVA, we are a diverse and passionate group of individuals brought together by a shared vision of innovation and excellence. Our team is dedicated to crafting smart, sustainable solutions for a better tomorrow. Each member brings a unique skill set, perspective, and energy, making collaboration our greatest strength. Together, we thrive on creativity, problem-solving, and a commitment to delivering impactful results.</p></h2></main>
+    
+
+    <!-- Team Section -->
+    <div class="team-container">
+      
+        <!-- Team Member 1 -->
+        <div class="team-member">
+            <img src="member2.jpg" alt="Team Member 2">
+            <h3>Ananya B Pattanashetty</h3>
+            <p>Roll no - 406</p>
+            <p>USN - 01FE23BCS055</p>
+            <div class="skills">
+                <div class="skill">C and C++</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Web Development (HTML and CSS)</div>
+            </div>
+        </div>
+           <!-- Team Member 1 -->
+        <div class="team-member">
+            <img src="member1.jpg" alt="Team Member 1">
+            <h3>Chinmayi K B</h3>
+            <p>Roll no - 412</p>
+            <p>USN - 01FE23BCS080</p>
+            <div class="skills">
+                <div class="skill">C and C++</div>
+                <div class="skill">Python</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Web Development (HTML and CSS)</div>
+            </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-member">
+            <img src="member3.jpg" alt="Team Member 3">
+            <h3>Ria Javalgi</h3>
+            <p>Roll no - 408</p>
+            <p>USN - 01FE23BCS</p>
+            <div class="skills">
+                <div class="skill">C and C++</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Web Development (HTML and CSS)</div>
+            </div>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="team-member">
+            <img src="member4.jpg" alt="Team Member 4">
+            <h3>Sanjana S</h3>
+            <p>Roll no - 407</p>
+            <p>USN - 01FE23BCS</p>
+            <div class="skills">
+                <div class="skill">C and C++</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Web Development (HTML and CSS)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 VAYUJIVA. All rights reserved.</p>
+    </footer>
+</body>
+</html>
