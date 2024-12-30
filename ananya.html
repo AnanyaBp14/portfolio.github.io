@@ -228,15 +228,29 @@ header p {
         }
         
         /* Link Styling */
-        a {
-            color: #A0CDCA; /* Cool Aquamarine */
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-            color: #617E96; /* Slate Blue */
-        }
+        .styled-link {
+    display: inline-block;
+    background-color: #006D77; /* Deep Teal */
+    color: #FFFFFF; /* White text */
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.styled-link:hover {
+    background-color: #004C4D; /* Darker Teal */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+.styled-link:active {
+    transform: translateY(0); /* Slightly revert when clicked */
+    box-shadow: none;
+}
+
         
         /* Mobile responsiveness */
         @media (max-width: 768px) {
@@ -382,19 +396,22 @@ header p {
     <p><strong>1. Arrays:</strong><br>
     <strong>Data Collection:</strong> Arrays store real-time traffic data such as vehicle counts, speeds, or sensor readings at various locations (intersections, highways). These data points are stored in indexed positions within arrays, allowing for fast updates and retrieval.<br>
     <strong>Traffic Flow Analysis:</strong> Arrays can be used to keep track of traffic conditions (e.g., car density, speed at different time intervals) at each sensor or traffic signal. This allows for quick access to specific locations or times.</p>
-    <p><a href="#array.cpp">Array code link here</a></p>
+    <p><a href="array.cpp" target="_blank">View Array Code</a></p>
+
 
     <h4>Hashing</h4> 
     <p><strong>2. Hashing:</strong><br>
     <strong>Data Indexing:</strong> Hashing is used to quickly map traffic data to specific locations or times. A hash function can map intersection IDs or time slots to the respective data values (e.g., vehicle counts).<br>
     <strong>Collision Resolution:</strong> For efficient real-time processing, hashing reduces the need for searching through large datasets by providing direct access to data points.</p>
-    <p><a href="#hashing.cpp">Hashing code link here</a></p>
+    <p><a href="hashing.cpp" target="_blank">View Hashing Code</a></p>
+
 
     <h4>Sparse Table</h4>
     <p><strong>3. Sparse Table:</strong><br>
     <strong>Efficient Range Queries:</strong> Sparse tables are useful for answering range queries (e.g., average vehicle count or speed) efficiently in scenarios where traffic data needs to be queried over a range of time or locations.<br>
     <strong>Preprocessing:</strong> Sparse tables preprocess the traffic data, allowing queries to be answered in constant time, which is crucial for real-time systems that need to process data rapidly.</p>
-    <p><a href="#sparcetable.cpp">Sparce table code link here</a></p>
+    <p><a href="sparcetable.cpp" target="_blank">View Sparce Table Code</a></p>
+
 </section>
       <section>
     <h3>EV Charging Station Management</h3>
@@ -404,19 +421,20 @@ header p {
     <strong>Use Case:</strong> Managing charging stations based on numerical attributes such as distance, availability, or user ratings.<br>
     <strong>Features:</strong> Efficiently supports range queries and sorted access. Operations like insertion, deletion, and search work in O(logn) time (on average).<br>
     <strong>Example:</strong> Storing charging stations sorted by distance allows users to query the nearest or farthest station effortlessly.</p>
-    <p><a href="#bst.cpp">BST code link here</a></p>
+    <p><a href="bst.cpp" target="_blank">View BST Code</a></p>
+
     
     <p><strong>2. Trie</strong><br>
     <strong>Use Case:</strong> Managing stations by textual data like names, locations, or zip codes.<br>
     <strong>Features:</strong> Enables fast prefix-based searches in O(l) where L is the length of the search key.<br>
     <strong>Example:</strong> A user types "Downtown", and the Trie instantly returns "Downtown Avenue Charging" or "Downtown Mall Charging Station".</p>
-    <p><a href="#trie.cpp">Trie code link here</a></p>
+    <p><a href="trie.cpp" target="_blank">View Trie Code</a></p>
 
     <p><strong>3. Arrays</strong><br>
     <strong>Use Case:</strong> Storing and updating real-time status data such as availability, usage stats, or maintenance schedules.<br>
     <strong>Features:</strong> Direct indexing for constant-time access. Memory-efficient for static or fixed datasets.<br>
     <strong>Example:</strong> Use an array indexed by station ID to track whether a station is "Free" or "Occupied".</p>
-    <p><a href="#arrayEV.cpp">Sparce table code link here</a></p>
+    <p><a href="arrayEV.cpp" target="_blank">View Array Code</a></p>
     
     <h4>System Workflow Example</h4>
     <p><strong>Storage:</strong><br>
