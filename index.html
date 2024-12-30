@@ -5,26 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
-    <style>html {
-        scroll-behavior: smooth;
-    }
-    
-    /* General Styles */
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #F7D1A4; /* Soft Peach */
-        margin: 0;
-        padding: 0;
-        color: #617E96; /* Slate Blue */
-    }
-    
-   /* Navigation styling */
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F7D1A4; /* Soft Peach */
+            margin: 0;
+            padding: 0;
+            color: #617E96; /* Slate Blue */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation Styling */
         nav {
             background-color: #617E96; /* Slate Blue */
             padding: 10px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
+
         nav a {
             color: white;
             text-decoration: none;
@@ -32,106 +40,101 @@
             margin: 0 10px;
             display: inline-block;
         }
-        
+
         nav a:hover {
-            background-color: #A0CDCA; /* Cool Aquamarine */
-            border-radius: 5px;
+            color: #A0CDCA; /* Cool Aquamarine */
+            transform: translateY(-3px);
         }
-    
-    /* Header */
-    header {
-        background-color: #F7D1A4; /* Deep Teal */
-        text-align: center;
-        padding: 30px 15px;
-        color: #FFFFFF; /* White */
-        font-size: 2.5rem;
-    }
-    
-    /* Main Content */
-    main {
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #FFFFFF; /* White for contrast */
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    main h1, main h2 {
-        color: #A0CDCA; /* Cool Aquamarine */
-        margin-bottom: 10px;
-    }
-    
-    main h3 {
-        color: #617E96; /* Slate Blue */
-        line-height: 1.6;
-    }
-    
-    .content-box {
-        background-color: #FFFFFF; /* White for the box background */
-        padding: 20px;
-        border-left: 5px solid #D9B29F; /* Soft Lavender accent */
-        margin-bottom: 20px;
-        border-radius: 8px;
-    }
-    /* Centering the course details */
-    h4 {
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 1rem;
-       
-    }
-    strong {
-        font-weight: bold;
-        color: #A0CDCA; /* Cool Aquamarine */
-    }
-    footer {
-        background-color: #006D77; /* Deep Teal */
-        color: #FFFFFF; /* White */
-        text-align: center;
-        padding: 10px 0;
-        margin-top: 20px;
-    }
-    
-     /* Footer */
+
+        /* Header */
+        header {
+            background-color: #F7D1A4;
+            text-align: center;
+            padding: 30px 15px;
+            color: #FFFFFF; /* White */
+            font-size: 2.5rem;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1; /* Ensure main content stretches to fill the space */
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF; /* White for contrast */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        main h1, main h2 {
+            color: #A0CDCA; /* Cool Aquamarine */
+            margin-bottom: 10px;
+        }
+
+        main h3 {
+            color: #617E96; /* Slate Blue */
+            line-height: 1.6;
+        }
+
+        .content-box {
+            background-color: #FFFFFF; /* White for the box background */
+            padding: 20px;
+            border-left: 5px solid #D9B29F; /* Soft Lavender accent */
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        h4 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #A0CDCA; /* Cool Aquamarine */
+        }
+
+        /* Footer */
         footer {
             background-color: #006D77; /* Deep Teal */
             color: #FFFFFF; /* White */
             text-align: center;
             padding: 20px 0;
-            margin-top: 40px;
+            margin-top: auto; /* Push footer to the bottom */
         }
-        
+
         footer p {
             margin: 0;
             font-size: 1rem;
         }
-        
+
         /* Link Styling */
         a {
             color: #A0CDCA; /* Cool Aquamarine */
             text-decoration: none;
         }
-        
+
         a:hover {
             text-decoration: underline;
             color: #617E96; /* Slate Blue */
         }
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        nav a {
-            display: block;
-            margin: 10px 0;
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            header {
+                font-size: 2rem;
+            }
         }
-    
-        main {
-            padding: 15px;
-        }
-    
-        header {
-            font-size: 2rem;
-        }
-    }
     </style>
 <body>
     <!-- Navigation Bar -->
