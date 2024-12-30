@@ -6,133 +6,253 @@
     <title>Home</title>
     <style>
         html {
-            scroll-behavior: smooth;
-        }
+    scroll-behavior: smooth;
+}
 
-        /* General Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #F7D1A4; /* Soft Peach */
-            margin: 0;
-            padding: 0;
-            color: #617E96; /* Slate Blue */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F7D1A4; /* Soft Peach */
+    margin: 0;
+    padding: 0;
+    color: #617E96; /* Slate Blue */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        /* Navigation Bar */
-        nav {
-            background-color: #617E96; /* Slate Blue */
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        nav a {
-            color: #FFFFFF; /* White */
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding: 10px 15px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-        
-        nav a:hover {
-            color: #A0CDCA; /* Cool Aquamarine */
-            transform: translateY(-3px);
-        }
+/* Navigation Bar */
+nav {
+    background: linear-gradient(90deg, #617E96, #006D77);
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: navFadeIn 1s ease-in-out;
+}
 
-        /* Header */
-        header {
-            background-color: #F7D1A4;
-            text-align: center;
-            padding: 30px 15px;
-            color: #FFFFFF; /* White */
-            font-size: 2.5rem;
-        }
+nav a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
 
-        /* Main Content */
-        main {
-            flex: 1; /* Ensure main content stretches to fill the space */
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #FFFFFF; /* White for contrast */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+nav a:hover {
+    color: #A0CDCA; /* Cool Aquamarine */
+    transform: scale(1.1);
+}
 
-        main h1, main h2 {
-            color: #A0CDCA; /* Cool Aquamarine */
-            margin-bottom: 10px;
-        }
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #A0CDCA; /* Cool Aquamarine */
+    transition: width 0.3s ease;
+}
 
-        main h3 {
-            color: #617E96; /* Slate Blue */
-            line-height: 1.6;
-        }
+nav a:hover::after {
+    width: 100%;
+}
 
-        .content-box {
-            background-color: #FFFFFF; /* White for the box background */
-            padding: 20px;
-            border-left: 5px solid #D9B29F; /* Soft Lavender accent */
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
+/* Navigation Animation */
+@keyframes navFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        h4 {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 1rem;
-        }
+/* Header */
+header {
+    background: linear-gradient(135deg, #006D77, #61A5C2, #A0CDCA);
+    text-align: center;
+    padding: 80px 20px;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: headerFadeIn 1.2s ease-in-out ;
+}
 
-        strong {
-            font-weight: bold;
-            color: #A0CDCA; /* Cool Aquamarine */
-        }
+header h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    font-weight: 900;
+    background: linear-gradient(to right, #F7D1A4, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShimmer 3s infinite alternate;
+}
 
-        /* Footer */
-        footer {
-            background-color: #006D77; /* Deep Teal */
-            color: #FFFFFF; /* White */
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px; /* Push footer to the bottom */
-        }
+header p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    animation: subheaderFadeIn 1.5s ease-in-out;
+}
 
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-        }
+/* Header Animations */
+@keyframes headerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        /* Link Styling */
-        a {
-            color: #A0CDCA; /* Cool Aquamarine */
-            text-decoration: none;
-        }
+@keyframes textShimmer {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
 
-        a:hover {
-            text-decoration: underline;
-            color: #617E96; /* Slate Blue */
-        }
+@keyframes subheaderFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
+/* Main Content */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: mainFadeIn 1.5s ease-in-out;
+}
 
-            main {
-                padding: 15px;
-            }
+main h1, main h2 {
+    color: #A0CDCA;
+    margin-bottom: 10px;
+}
 
-            header {
-                font-size: 2rem;
-            }
-        }
+main h3 {
+    color: #617E96;
+    line-height: 1.6;
+}
+
+.content-box {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-left: 5px solid #D9B29F;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+strong {
+    font-weight: bold;
+    color: #A0CDCA;
+}
+
+/* Footer */
+footer {
+    background-color: #006D77;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    animation: footerFadeIn 1s ease-in-out;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Footer Animation */
+@keyframes footerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Link Styling */
+a {
+    color: #A0CDCA;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #617E96;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    header {
+        font-size: 2.5rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+}
+
     </style>
 <body>
     <!-- Navigation Bar -->
@@ -140,7 +260,7 @@
             <a href="index.html">Home</a>
             <a href="project.html">Project</a>
             <a href="ananya.html">Ananya</a>
-        <a href="chinmayi.html">Chinmayi</a>
+     		<a href="chinmayi.html">Chinmayi</a>
             <a href="ria.html">Ria</a>
             <a href="sanjana.html">Sanjana</a>
             <a href="about.html">About</a>
