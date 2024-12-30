@@ -6,139 +6,246 @@
     <title>About Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+       html {
+    scroll-behavior: smooth;
+}
 
-        /* General Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #F7D1A4; /* Soft Peach */
-            margin: 0;
-            padding: 0;
-            color: #617E96; /* Slate Blue */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F7D1A4; /* Soft Peach */
+    margin: 0;
+    padding: 0;
+    color: #617E96; /* Slate Blue */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
 
-        /* Navigation Bar */
-        nav {
-            background-color: #617E96; /* Slate Blue */
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        nav a {
-            color: #FFFFFF; /* White */
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding: 10px 15px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-        
-        nav a:hover {
-            color: #A0CDCA; /* Cool Aquamarine */
-            transform: translateY(-3px);
-        }
+/* Navigation Bar */
+nav {
+    background-color: #617E96; /* Slate Blue */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
 
-        /* Header */
-        header {
-            background-color: #F7D1A4;
-            text-align: center;
-            padding: 0px 15px;
-            color: #FFFFFF; /* White */
-            font-size: 2rem;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #A0CDCA; /* Cool Aquamarine */
+    transform: translateY(-5px);
+}
+
+header {
+    background: linear-gradient(135deg, #006D77, #61A5C2, #A0CDCA);
+    text-align: center;
+    padding: 70px 20px;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: headerFadeIn 1.2s ease-in-out ;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    font-weight: 900;
+    background: linear-gradient(to right, #F7D1A4, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShimmer 3s infinite alternate;
+}
+      header p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    animation: subheaderFadeIn 1.5s ease-in-out;
+}
+@keyframes headerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main Section */
 main h2 {
     text-align: center;
-    margin: 20px auto; /* Adds spacing */
-    font-size: 1.5rem; /* Adjust font size if needed */
-    color:#617E96 ; /* Matches the palette */
-    line-height: 1.8; /* Improves readability */
+    margin: 20px auto;
+    font-size: 1.6rem;
+    color: #617E96; /* Slate Blue */
+    line-height: 1.8;
+    max-width: 900px;
+    padding: 20px;
+    text-align: justify;
+    animation: fadeInUp 1.5s ease-in-out;
 }
-        /* Team Section */
-        .team-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
 
-        .team-member {
-            background-color: #FFFFFF; /* White */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            width: 250px;
-        }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        .team-member img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
+/* Team Section */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
 
-        .team-member h3 {
-            color: #617E96; /* Slate Blue */
-        }
+.team-member {
+    background-color: #FFFFFF; /* White */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 40px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
 
-        .team-member p {
-            margin: 5px 0;
-            color: #A0CDCA; /* Cool Aquamarine */
-        }
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
 
-        .skills {
-            margin-top: 10px;
-        }
+.team-member img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
 
-        .skill {
-            background-color: #D9B29F; /* Soft Lavender */
-            color: #FFFFFF;
-            padding: 5px 10px;
-            border-radius: 5px;
-            margin: 5px auto;
-            display: inline-block;
-            font-size: 0.9rem;
-        }
+.team-member img:hover {
+    transform: scale(1.1);
+}
 
-        /* Footer Section */
-        footer {
-            background-color: #006D77; /* Deep Teal */
-            color: #FFFFFF; /* White */
-            text-align: center;
-            padding: 20px 0;
-            margin-top: auto; /* Push footer to the bottom */
-        }
+.team-member h3 {
+    color: #617E96; /* Slate Blue */
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
 
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-        }
+.team-member p {
+    margin: 5px 0;
+    color: #A0CDCA; /* Cool Aquamarine */
+    font-size: 1rem;
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
+.skills {
+    margin-top: 10px;
+}
 
-            .team-container {
-                flex-direction: column;
-                align-items: center;
-            }
+.skill {
+    background-color: #D9B29F; /* Soft Lavender */
+    color: #FFFFFF;
+    padding: 8px 14px;
+    border-radius: 12px;
+    margin: 6px;
+    display: inline-block;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-            header {
-                font-size: 2rem;
-            }
-        }
+.skill:hover {
+    transform: scale(1.1);
+    background-color: #A0CDCA; /* Cool Aquamarine */
+}
+
+/* Footer Section */
+footer {
+    background-color: #006D77; /* Deep Teal */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 20px;
+        font-size: 2.4rem;
+    }
+
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+    }
+
+    main h2 {
+        font-size: 1.4rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+
     </style>
 </head>
 <body>
@@ -156,10 +263,12 @@ main h2 {
 
     <!-- Header Section -->
     <header>
-        <h1>Meet Our Team</h1>
-      </header>
-  <main>
-        <h2><p>At VAYUJIVA, we are a diverse and passionate group of individuals brought together by a shared vision of innovation and excellence. Our team is dedicated to crafting smart, sustainable solutions for a better tomorrow. Each member brings a unique skill set, perspective, and energy, making collaboration our greatest strength. Together, we thrive on creativity, problem-solving, and a commitment to delivering impactful results.</p></h2></main>
+        <h1><strong>Meet Our Team</strong></h1>
+      
+  
+    
+        <h2><p>At VAYUJIVA, we are a diverse and passionate group of individuals brought together by a shared vision of innovation and excellence. Our team is dedicated to crafting smart, sustainable solutions for a better tomorrow. Each member brings a unique skill set, perspective, and energy, making collaboration our greatest strength. Together, we thrive on creativity, problem-solving, and a commitment to delivering impactful results.</p></h2></header>
+ 
     
 
     <!-- Team Section -->
