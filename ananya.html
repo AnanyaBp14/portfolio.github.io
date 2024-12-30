@@ -397,26 +397,28 @@ header p {
     <strong>Data Collection:</strong> Arrays store real-time traffic data such as vehicle counts, speeds, or sensor readings at various locations (intersections, highways). These data points are stored in indexed positions within arrays, allowing for fast updates and retrieval.<br>
     <strong>Traffic Flow Analysis:</strong> Arrays can be used to keep track of traffic conditions (e.g., car density, speed at different time intervals) at each sensor or traffic signal. This allows for quick access to specific locations or times.</p>
     <p><a href="array.cpp" target="_blank">View Array Code</a></p>
-	<strong>Justification:</strong>Arrays let us store traffic data (like vehicle counts, speed, or sensor readings) in an orderly way, making it quick and easy to access.<br>
-Real-time traffic monitoring needs quick access to data, like getting the number of cars at an intersection right now. Arrays are great for this because we can access any piece of data in constant time (O(1)), meaning no delays when we need to act fast.<br>
-Think of it like a well-organized filing system where you can grab the right file instantly without rummaging through a pile.<br>
+	<strong>Justification:</strong><br>
+	<li>Arrays let us store traffic data (like vehicle counts, speed, or sensor readings) in an orderly way, making it quick and easy to access.</li><br>
+	<li>Real-time traffic monitoring needs quick access to data, like getting the number of cars at an intersection right now. Arrays are great for this because we can access any piece of data in constant time (O(1)), meaning no delays when we need to act fast.<br></li>
+<li>Think of it like a well-organized filing system where you can grab the right file instantly without rummaging through a pile.</li><br>
     <h4>Hashing</h4> 
     <p><strong>2. Hashing:</strong><br>
     <strong>Data Indexing:</strong> Hashing is used to quickly map traffic data to specific locations or times. A hash function can map intersection IDs or time slots to the respective data values (e.g., vehicle counts).<br><br>
 	<strong>Collision Resolution:</strong> For efficient real-time processing, hashing reduces the need for searching through large datasets by providing direct access to data points.</p><br>
     <p><a href="hashing.cpp" target="_blank">View Hashing Code</a></p>
-<strong>Justification:</strong>Traffic monitoring involves a lot of real-time updates, such as tracking vehicles or detecting accidents. Hashing allows us to find or update data in constant time (O(1)), which is crucial when dealing with large amounts of data that change frequently.<br>
-For example, if we want to track a car’s location based on its ID, hashing helps us do that instantly without sifting through all the data.<br>
-Imagine you're trying to find a contact in your phone’s contact list. Instead of scrolling through all names, you search by the first letter of the name and jump directly to it—that's what hashing does for our traffic data.<br>
+<strong>Justification:</strong><br>
+	<li>Traffic monitoring involves a lot of real-time updates, such as tracking vehicles or detecting accidents. Hashing allows us to find or update data in constant time (O(1)), which is crucial when dealing with large amounts of data that change frequently.<br></li>
+<li>For example, if we want to track a car’s location based on its ID, hashing helps us do that instantly without sifting through all the data.<br></li>
+<li>Imagine you're trying to find a contact in your phone’s contact list. Instead of scrolling through all names, you search by the first letter of the name and jump directly to it—that's what hashing does for our traffic data.<br></li>
 
     <h4>Sparse Table</h4>
     <p><strong>3. Sparse Table:</strong><br>
     <strong>Efficient Range Queries:</strong> Sparse tables are useful for answering range queries (e.g., average vehicle count or speed) efficiently in scenarios where traffic data needs to be queried over a range of time or locations.<br>
     <strong>Preprocessing:</strong> Sparse tables preprocess the traffic data, allowing queries to be answered in constant time, which is crucial for real-time systems that need to process data rapidly.</p>
     <p><a href="sparcetable.cpp" target="_blank">View Sparce Table Code</a></p>
-<strong>Justification:</strong>In traffic monitoring, we often need to query information over a range of time or locations, like checking average speeds or congestion levels over the past few hours. Sparse Tables allow us to do this in constant time (O(1)) after a little bit of setup.<br>
-This is perfect for cases where data doesn’t change often but is queried a lot, like looking up average traffic conditions over the course of a day or week.<br>
-It’s like having a shortcut to answer recurring questions about traffic without having to redo all the calculations every time.<br>
+<strong>Justification:</strong><br><li>In traffic monitoring, we often need to query information over a range of time or locations, like checking average speeds or congestion levels over the past few hours. Sparse Tables allow us to do this in constant time (O(1)) after a little bit of setup.</li><br>
+<li>This is perfect for cases where data doesn’t change often but is queried a lot, like looking up average traffic conditions over the course of a day or week.</li><br>
+<li>It’s like having a shortcut to answer recurring questions about traffic without having to redo all the calculations every time.</li><br>
 <h4>Why These Algorithms Are Perfect for this task ?</h4>
 	<strong>Speed: </strong>In real-time traffic monitoring, we need to process data quickly. These algorithms ensure we can store, search, and update data without delays.
 
@@ -434,26 +436,26 @@ It’s like having a shortcut to answer recurring questions about traffic withou
     <strong>Features:</strong> Efficiently supports range queries and sorted access. Operations like insertion, deletion, and search work in O(logn) time (on average).<br>
     <strong>Example:</strong> Storing charging stations sorted by distance allows users to query the nearest or farthest station effortlessly.</p>
     <p><a href="bst.cpp" target="_blank">View BST Code</a></p>
-<strong>Justification:</strong>
-	      <strong>Quick Searching: </strong>Imagine trying to find a charging station by location, power output, or availability in a huge city. A Binary Search Tree organizes stations in a way that makes it super fast to search and find exactly what you need. Instead of searching through every station, BSTs allow you to find one in logarithmic time (O(log n)), which is much faster than scanning through a list.<br>
-	      <strong>Efficient Updates:</strong>Charging stations change their availability all the time. A BST lets you easily add or remove stations or update their status without slowing down the system.<br>
+<strong>Justification:</strong><br>
+	      <li><strong>Quick Searching: </strong>Imagine trying to find a charging station by location, power output, or availability in a huge city. A Binary Search Tree organizes stations in a way that makes it super fast to search and find exactly what you need. Instead of searching through every station, BSTs allow you to find one in logarithmic time (O(log n)), which is much faster than scanning through a list.</li><br>
+	      <li><strong>Efficient Updates:</strong>Charging stations change their availability all the time. A BST lets you easily add or remove stations or update their status without slowing down the system.</li><br>
 
     <p><strong>2. Trie</strong><br>
     <strong>Use Case:</strong> Managing stations by textual data like names, locations, or zip codes.<br>
     <strong>Features:</strong> Enables fast prefix-based searches in O(l) where L is the length of the search key.<br>
     <strong>Example:</strong> A user types "Downtown", and the Trie instantly returns "Downtown Avenue Charging" or "Downtown Mall Charging Station".</p>
     <p><a href="trie.cpp" target="_blank">View Trie Code</a></p>
-<strong>Justification:</strong>Tries are ideal for searching locations, especially when you’re looking for stations based on part of their name or address. For example, if you type in “Main St,” a Trie can quickly find all the stations along Main Street without needing to search through every single station.<br>
-	      <strong>Location-Based Searches:</strong>
-	      <strong>Auto-Completion:</strong>Tries can also make suggestions as you type, helping users find charging stations by completing the location or street name as they enter it.<br>
+<strong>Justification:</strong><br><li>
+	      <strong>Location-Based Searches:</strong>Tries are ideal for searching locations, especially when you’re looking for stations based on part of their name or address. For example, if you type in “Main St,” a Trie can quickly find all the stations along Main Street without needing to search through every single station.</li></li><br>
+	    <li> <strong>Auto-Completion:</strong>Tries can also make suggestions as you type, helping users find charging stations by completing the location or street name as they enter it.</li><br>
     <p><strong>3. Arrays</strong><br>
     <strong>Use Case:</strong> Storing and updating real-time status data such as availability, usage stats, or maintenance schedules.<br>
     <strong>Features:</strong> Direct indexing for constant-time access. Memory-efficient for static or fixed datasets.<br>
     <strong>Example:</strong> Use an array indexed by station ID to track whether a station is "Free" or "Occupied".</p>
     <p><a href="arrayEV.cpp" target="_blank">View Array Code</a></p>
-    <strong>Justification:</strong>
-	      <strong>Fixed Data: </strong>Some information about charging stations (like their ID, capacity, or power ratings) doesn’t change often. Arrays are perfect for storing this type of static data because they allow you to quickly access any piece of information without extra processing.<br>
-<strong>Quick Updates: </strong>For real-time updates—like when a station becomes available or occupied—arrays can quickly reflect these changes with O(1) time complexity.<br>
+    <strong>Justification:</strong><br>
+	    <li>  <strong>Fixed Data: </strong>Some information about charging stations (like their ID, capacity, or power ratings) doesn’t change often. Arrays are perfect for storing this type of static data because they allow you to quickly access any piece of information without extra processing.</li><br>
+<li><strong>Quick Updates: </strong>For real-time updates—like when a station becomes available or occupied—arrays can quickly reflect these changes with O(1) time complexity.</li><br>
     <h4>System Workflow Example</h4>
     <p><strong>Storage:</strong><br>
     Use a BST to sort stations by distance for range-based queries.<br>
