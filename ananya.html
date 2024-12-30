@@ -117,7 +117,30 @@
         section ul li {
             font-size: 1.1em;
         }
+        /* Footer */
+        footer {
+            background-color: #006D77; /* Deep Teal */
+            color: #FFFFFF; /* White */
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
         
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        /* Link Styling */
+        a {
+            color: #A0CDCA; /* Cool Aquamarine */
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            color: #617E96; /* Slate Blue */
+        }
         
         /* Mobile responsiveness */
         @media (max-width: 768px) {
@@ -140,6 +163,10 @@
         
             p, ul li {
                 font-size: 1em;
+            
+	    footer {
+                font-size: 0.9rem;
+                padding: 15px 0;
             }
         }
         </style>
@@ -347,6 +374,14 @@
             </li>
         </ul>
       </section>
+	   <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="year"></span> Vayujiva. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
     </section>
+	
+	
 </body>
 </html>
