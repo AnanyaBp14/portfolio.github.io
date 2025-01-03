@@ -432,41 +432,41 @@ header p {
     <p>Efficient management of EV charging stations in a city is crucial for ensuring accessibility and optimizing usage. Data structures like Binary Search Trees (BST), Tries, and Arrays play a vital role in organizing, searching, and retrieving information about charging stations.</p>
     
     
-    <h2>1. Array</h2>
+    <h4>1. Array</h4>
     <h3>How It Works:</h3>
     <p>Arrays allow us to quickly access a specific "box" (or child node) using its position, which is determined by the character of the station name. It’s like having a quick-access drawer for each letter of the alphabet.</p>
 
-    <h3>Uses:</h3>
+    <h4>Uses:</h4>
     <ul>
         <li><strong>Fast Access:</strong> Arrays provide O(1) time complexity for accessing any element by index, making them perfect for the TrieNode's child pointers. This ensures that each character of the station name is processed efficiently.</li>
         <li><strong>Efficient Space Use:</strong> Using a fixed-size array ensures efficient use of memory as it holds exactly 26 pointers, one for each letter in the alphabet. This is perfect for working with the English alphabet (a-z).</li>
     </ul>
 
-    <h3>Justification:</h3>
+    <h4>Justification:</h4>
     <div class="justification">
-      <li>  <p><strong>Fast Lookups:</strong> Arrays provide constant time (O(1)) access, making them perfect for direct access to characters in station names.</p> </li>
-       <li>  <p><strong>Space Efficiency:</strong> The fixed size of the array ensures minimal memory usage, storing exactly 26 pointers per node.</p> </li>
-        <li> <p><strong>No Overhead:</strong> Arrays have minimal overhead compared to structures like hash maps, making them ideal for a fixed alphabet size.</p> </li>
+      <li>  <strong>Fast Lookups:</strong> Arrays provide constant time (O(1)) access, making them perfect for direct access to characters in station names.</li><br>
+       <li>  <strong>Space Efficiency:</strong> The fixed size of the array ensures minimal memory usage, storing exactly 26 pointers per node. </li><br>
+        <li> <strong>No Overhead:</strong> Arrays have minimal overhead compared to structures like hash maps, making them ideal for a fixed alphabet size.</li><br>
     </div>
 
 
 
-    <h2>2. Trie</h2>
-    <h3>How It Works:</h3>
+    <h4>2. Trie</h4>
+    <h4>How It Works:</h4>
     <p>A Trie is a tree-like data structure where each character of a station's name is stored as a separate node. This allows us to easily search for stations by their prefixes and handle long names efficiently.</p>
 
-    <h3>Uses:</h3>
+    <h4>Uses:</h4>
     <ul>
-        <li><strong>Prefix Search:</strong> Tries shine when we want to search by prefixes, such as finding all stations starting with "super" or "green". It makes autocomplete features fast and accurate.</li>
-        <li><strong>Efficient for Long Strings:</strong> Unlike other structures, the Trie only uses as many nodes as there are characters in the station name, so long names don’t slow down the system.</li>
-        <li><strong>Fast Lookups and Insertions:</strong> Searching for a station and adding a new one happens in linear time (O(m), where m is the number of characters in the name).</li>
+        <li><strong>Prefix Search:</strong> Tries shine when we want to search by prefixes, such as finding all stations starting with "super" or "green". It makes autocomplete features fast and accurate.</li><br>
+        <li><strong>Efficient for Long Strings:</strong> Unlike other structures, the Trie only uses as many nodes as there are characters in the station name, so long names don’t slow down the system.</li><br>
+        <li><strong>Fast Lookups and Insertions:</strong> Searching for a station and adding a new one happens in linear time (O(m), where m is the number of characters in the name).</li><br>
     </ul>
 
-    <h3>Justification:</h3>
+    <h4>Justification:</h4>
     <div class="justification">
-       <li>  <p><strong>Prefix Matching:</strong> Tries are highly efficient for prefix searches, making them ideal for autocomplete functionalities.</p> </li>
-        <li> <p><strong>Fast Search and Insert (O(m)):</strong> Both searching and insertion are done in O(m) time, where m is the length of the station name. This makes Tries suitable for long names or large sets of data.</p> </li>
-       <li>  <p><strong>Space Efficiency:</strong> While Tries may use more memory than other structures, shared prefixes reduce memory usage, making them efficient for storing similar strings.</p> </li>
+       <li>  <strong>Prefix Matching:</strong> Tries are highly efficient for prefix searches, making them ideal for autocomplete functionalities.</li><br>
+        <li> <strong>Fast Search and Insert (O(m)):</strong> Both searching and insertion are done in O(m) time, where m is the length of the station name. This makes Tries suitable for long names or large sets of data. </li><br>
+       <li>  <strong>Space Efficiency:</strong> While Tries may use more memory than other structures, shared prefixes reduce memory usage, making them efficient for storing similar strings.</li><br>
     </div>
 
 
@@ -483,9 +483,11 @@ header p {
 
     <h3>Justification:</h3>
     <div class="justification">
-         <li><p><strong>Prefix Matching:</strong> While not as efficient for prefix searches as Tries, BSTs still maintain sorted data and can perform prefix-based searches.</p> </li>
-        <li> <p><strong>Efficient Operations (O(log n)):</strong> Searching, inserting, and deleting stations in a BST are quick due to the logarithmic time complexity.</p> </li>
-        <li> <p><strong>Sorted Data:</strong> BSTs automatically maintain a sorted order of stations, making it easy to search through them in alphabetical order.</p> </li>
+         <li><strong>Ordered Data: </strong> The BST inherently maintains its data in sorted order. This is crucial for operations like in-order traversal, where stations are displayed alphabetically. The sorted order ensures that the stations can be accessed and displayed in ascending order of their names efficiently.<br>
+</p> </li>
+        <li> <strong>Logarithmic Time Complexity: :</strong>For a balanced tree, search, insert, and delete operations are performed in O(log n) time. This is a significant advantage over linear data structures like arrays or linked lists, especially when dealing with large datasets.
+</li><br>
+        <li> <strong>Efficient Search: </strong>  The BST allows quick search for stations by name. If the station exists, it can be located in O(log n) time (in a balanced tree), which is optimal for large sets of data</li><br>
     </div><p><a href="https://github.com/AnanyaBp14/code/blob/main/EVChargingStationManagement.cpp" target="_blank">View final implementation code of Smart City Traffic Management </a></p>
       </section>
    <section>
